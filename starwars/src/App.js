@@ -16,8 +16,7 @@ const App = () => {
     axios
       .get(`https://swapi.co/api/people/`)
       .then(response => {
-        const characters = response.results;
-        console.log(characters);
+        const characters = response.data.results;
         setPerson(characters);
       })
       .catch(error => {
@@ -28,9 +27,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div className="entry">
+      <div>
         {person.map(item => {
-          return <PersonCard key={item} imgUrl={item} />;
+          return <PersonCard key={item} personName={item.name} personGender={item.gender} personHome={item.homeworld} />;
         })}
       </div>
     </div>
