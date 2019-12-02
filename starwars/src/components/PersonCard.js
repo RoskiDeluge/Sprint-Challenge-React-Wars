@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const CharacterCard = styled.div`
-  background: gray;
+  background: lightgray;
   color: black;
   width: 250px;
   max-height: 300px;
