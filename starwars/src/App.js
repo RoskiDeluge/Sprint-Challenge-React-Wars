@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PersonCard from "./components/PersonCard";
-import styled from "styled-components";
 import './App.css';
 
 const App = () => {

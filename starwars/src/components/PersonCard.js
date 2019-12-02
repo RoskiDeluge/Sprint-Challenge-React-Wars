@@ -12,16 +12,24 @@ const CharacterCard = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
+`;
+
+const CharacterName = styled.h2`
+  font-family: 'Impact', sans-serif;
+`;
+
+const CharacterProperty = styled.p`
+  font-family: 'Courier New', serif;
 `;
 
 const PersonCard = props => {
   return (
     <CharacterCard>
-      <h2>{props.personName}</h2>
-      <p>Gender: {props.personGender}</p>
-      <p>Height: {props.personHeight}</p>
-      <p>Mass: {props.personMass}</p>
+      <CharacterName>{props.personName}</CharacterName>
+      <CharacterProperty>Gender: {props.personGender}</CharacterProperty>
+      <CharacterProperty>Height: {props.personHeight}</CharacterProperty>
+      <CharacterProperty>Mass: {props.personMass}</CharacterProperty>
     </CharacterCard>
   );
 };
