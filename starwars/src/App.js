@@ -17,6 +17,7 @@ const App = () => {
       .get(`https://swapi.co/api/people/`)
       .then(response => {
         const characters = response.data.results;
+        console.log(characters);
         setPerson(characters);
       })
       .catch(error => {
@@ -27,9 +28,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div>
+      <div className="entry">
         {person.map(item => {
-          return <PersonCard key={item} personName={item.name} personGender={item.gender} personHome={item.homeworld} />;
+          return <PersonCard key={item} 
+          personName={item.name} 
+          personGender={item.gender} 
+          personHeight={item.height} 
+          personMass={item.mass} 
+          />;
         })}
       </div>
     </div>
